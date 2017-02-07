@@ -1,0 +1,140 @@
+body {
+  font-family: 'Risque', cursive;
+  font-size: 25px;
+  color: #333333;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+}
+.nav>li>a {
+  padding: 8px 13px;
+  color: white;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+.nav>li>a:hover {
+  color: black;
+}
+
+/* HEADER */
+header hr {
+  width: 30%;
+  text-align: right; 
+  margin-right: 0;
+}
+.intro-header {
+  background: no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll;
+  background-color:gray;
+  height: 530px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  padding: 100px 0 50px;
+  font-family: 'Indie Flower', cursive;
+  text-align: right;
+  color: white;
+}
+header h1 {
+  font-size: 70px;
+  margin-left: 550px;
+  text-shadow: 2px 2px 2px;
+}
+
+/* ARTICLE */
+article {
+  margin: 5px;
+  padding: 10px;
+  text-align: justify;
+}
+article h1 {
+  text-align: center;
+}
+article p a {
+  font-family: 'Risque', cursive;
+  font-size: 30px;
+  color: black;
+  text-shadow: 2px 2px 2px;
+}
+article p a:hover {
+  color: gray;
+  text-decoration: none;
+}
+dl, article p {
+  font-family: 'Cabin Condensed', sans-serif;
+  line-height: 23px;
+  font-size: 20px;
+  padding: 7px;
+}
+article p, dd {
+  text-indent: 3em;
+  padding: 7px;
+}
+dt {
+  font-size: 23px;
+  padding-top: 12px;
+}
+.post {
+  padding:20px;
+  border-left:10px solid #ddd;
+  background-image :url(http://4.bp.blogspot.com/-I7XvY5FUhYA/U7-Hp1S1ucI/AAAAAAAAB3Y/vE-VP7oCza0/s1600/szare+zygzaki50.png);
+  margin: 10px;
+}
+cite {
+  font-family: 'Cabin Condensed', cursive;
+  font-size: 15px;
+  padding: 10px;
+}
+em {
+  font-style: italic;
+}
+.home {
+  width: 230px;
+  color: gray;
+  border-radius: 12px;
+  box-shadow: 3px 3px 3px;
+  box-shadow: currentColor;
+  opacity: 0.9;
+  transition: all, 1s;
+}
+.home:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+.img-post {
+  vertical-align: middle;
+  width: 50%;
+  padding: 5px;
+  font-size: 15px;
+  font-style: italic;
+}
+.latest-post {
+  padding: 10px;
+  margin: 5px;
+  font-size: 35px;
+  text-shadow: 2px 2px 2px;
+  color: black;
+}
+
+/* FOOTER */
+footer {
+  margin: 5px;
+}
+#footer{
+  text-align: center;
+}
+footer .copyright {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 0;
+}
+footer p {
+  font-size: 10px;
+  padding: 10px;
+}
