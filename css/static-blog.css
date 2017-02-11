@@ -82,7 +82,7 @@ dt {
 }
 .post {
   padding:20px;
-  border-left:10px solid #ddd;
+  border-left: 10px solid #ddd;
   background-image :url(http://4.bp.blogspot.com/-I7XvY5FUhYA/U7-Hp1S1ucI/AAAAAAAAB3Y/vE-VP7oCza0/s1600/szare+zygzaki50.png);
   margin: 10px;
 }
@@ -122,6 +122,22 @@ em {
   color: black;
 }
 
+/* POST PRESENTATION */
+.post-title {
+  color: black;
+}
+.post-subtitle {
+  font-family: 'Cabin Condensed', sans-serif;
+  font-size: 20px;
+  color: black;
+}
+.post-meta {
+  font-size: 15px;
+}
+.post-preview {
+  padding: 10px;
+  margin: 5px;
+}
 /* FOOTER */
 footer {
   margin: 5px;
@@ -137,4 +153,20 @@ footer .copyright {
 footer p {
   font-size: 10px;
   padding: 10px;
+}
+
+/* JAVASCRIPT */
+.after {
+  background-color: #D8DEE6;
+  opacity: 0.75;
+}
+.after>li>a {
+  color: black;
+}
+.after>li>a:hover {
+  color: black;
+}
+.before {
+  opacity: 1;
+  color: white;
 }

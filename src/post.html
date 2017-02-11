@@ -7,17 +7,15 @@
         <meta name="description" content="">
         <meta name="author" content=""> 
         <title>Static Blog</title>
-        <!-- Bootstrap Core CSS -->
-        <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        <!-- CSS -->
+        <link href="../bootstrap/bootstrap-social.css" rel="stylesheet" media="screen">
+        <link href="../bootstrap/css/font-awesome.css" rel="stylesheet" media="screen">
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Risque" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed" rel="stylesheet">
-        <link href="css/static-blog-reset.css" rel="stylesheet">        
-        <link href="css/static-blog.css" rel="stylesheet">
+        <link href="../css/static-blog-reset.css" rel="stylesheet">        
+        <link href="../css/static-blog.css" rel="stylesheet">
     </head>
     <body>
         <nav>
@@ -25,23 +23,23 @@
                 <div class="row">
                     <div class="col-lg-4 col-lg-offset-8">         
                         <ul class="nav nav-pills nav-justified">
-                            <li role="presentation"><a href="index.html">HOME</a></li>
-                            <li role="presentation"><a href="about.html">ABOUT</a></li>
+                            <li role="presentation"><a href="../src/index.html">HOME</a></li>
+                            <li role="presentation"><a href="../src/about.html">ABOUT</a></li>
                             <li role="presentation" class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">CATS <span class="caret"></span>
                                 <ul class="dropdown-menu">
-                                    <li><a href="new-kitten.html">New Kitten</a></li>
+                                    <li><a href="../src/new-kitten.html">New Kitten</a></li>
                                     <li><a href="#">Adult Cat</a></li>
                                     <li><a href="#">Senior Cat</a></li>
                                 </ul>
                             </li>
-                            <li role="presentation"><a href="contact.html">CONTACT</a></li>
+                            <li role="presentation"><a href="../src/contact.html">CONTACT</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
-        <header class="intro-header" style="background-image: url('img/post.jpg')">
+        <header class="intro-header" style="background-image: url('../img/post.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -52,7 +50,7 @@
                 </div>
             </div>
         </header>
-        <article>
+        <article id="startchange">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1">
@@ -75,7 +73,7 @@
                             <dd>If you are a cat owner, chances are you have claw marks on something in your home. Cats tend to love to scratch; it is a natural behavior they engage in to mark their territory, keep their claws in shape and stretch their bodies. Help keep your cat from shredding your sofa by providing him with multiple scratching surfaces. Some kitties like vertical surfaces and others may prefer scratching horizontally. Try varying the scratching material, too. Sisal rope, carpet and cardboard are a few you can try.</dd>
                             <dt>#5. Channel His Inner Huntsman</dt>
                             <dd>While the thought of having all of your meals prepared and served to you might sound appealing, your feline friend doesn't necessarily agree. Cats are predatory by nature, so help your kitty fulfill his hunting fantasies by providing him with prey-like toys (think wands with feathers and fast-moving furry toys that mimic mice). Then sit back and watch him stalk and hunt like the tiger he knows he really is!</dd>
-                            <center><img src="img/post2.jpg" alt="Hunting cat" class="img-post">
+                            <center><img src="../img/post2.jpg" alt="Hunting cat" class="img-post">
                             <p class="text-muted img-post">Channel His Inner Huntsman</p></center>
                             <dt>#6. Go Wild With Perches and Climbing Systems</dt>
                             <dd>Consider how cats live in the wild when creating your cat's indoor environment. Outdoor cats can be seen climbing trees, running along fences or sitting in high places so they can keep on eye on their territory. You can mimic these conditions by simply moving furniture around or by investing in window perches, cat trees and climbing systems.</dd>
@@ -95,9 +93,29 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2" id="footer">
                         <hr>
+                        <ul class="list-inline text-center">
+                            <li><a href="#">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span></a>
+                            </li>
+                            <li><a href="#">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                    </span></a>
+                            </li>
+                            <li><a href="#">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span></a>
+                            </li>
+                        </ul>
                         <p class="copyright text-muted">Copyright © Your Website 2017</p>
                     </div>
-                </div>    
+                </div>        
                 <div class="row">
                     <div class="col-lg-12">
                         <hr>
@@ -110,5 +128,23 @@
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){       
+                var scroll_start = 0;
+                var startchange = $('#startchange');
+                var offset = startchange.offset();
+                $(document).scroll(function() {
+                    scroll_start = $(this).scrollTop();
+                    if(scroll_start > offset.top) {
+                        $('.nav-justified').addClass("after");
+                        $("nav").addClass("after");
+                    } else {
+                        $("nav").removeClass("after");
+                        $('.nav-justified').removeClass("after");
+                        $('.nav-justified').addClass("before");
+                    }
+                });
+            });
+        </script>    
     </body>
 </html>    
