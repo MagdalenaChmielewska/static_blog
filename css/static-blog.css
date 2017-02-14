@@ -138,6 +138,28 @@ em {
   padding: 10px;
   margin: 5px;
 }
+
+/* FORM */
+form {
+  font-family: 'Cabin Condensed', sans-serif;
+  padding: 5px;
+}
+.form-group {
+  padding: 5px;
+}
+:focus {
+  background-color: white;
+}
+.invalid {
+  background:#FFEDED url(http://cdn1.iconfinder.com/data/icons/ledicons/cross.png) 95% 10px no-repeat;
+}
+.valid {
+  background:white url(http://cdn1.iconfinder.com/data/icons/ledicons/accept.png) 95% 10px no-repeat;
+}
+form button {
+  font-family: 'Risque', cursive;
+}
+
 /* FOOTER */
 footer {
   margin: 5px;

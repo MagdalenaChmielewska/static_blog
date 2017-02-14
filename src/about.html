@@ -103,23 +103,6 @@
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function(){       
-                var scroll_start = 0;
-                var startchange = $('#startchange');
-                var offset = startchange.offset();
-                $(document).scroll(function() {
-                    scroll_start = $(this).scrollTop();
-                    if(scroll_start > offset.top) {
-                        $('.nav-justified').addClass("after");
-                        $("nav").addClass("after");
-                    } else {
-                        $("nav").removeClass("after");
-                        $('.nav-justified').removeClass("after");
-                        $('.nav-justified').addClass("before");
-                    }
-                });
-            });
-        </script>
+        <script src="../js/static-blog.js"></script>  
     </body>
 </html>    

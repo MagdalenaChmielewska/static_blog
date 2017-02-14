@@ -54,8 +54,43 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1">
-                        
+                        <h1>Want to ask me a question? Fill out the form below to send me a message and I will get back to you as soon as I can.</h1>
+                        <hr>
                     </div>
+                </div>
+                <div class="row control-group">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <form class="form-horizontal" role="form" novalidate>
+                            <div class="form-group">
+                                <label for="username" class="col-sm-2 control-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="username" value="" placeholder="Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email Adress" required value="" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phonenumber" class="col-sm-2 control-label">Phone Number</label>
+                                <div class="col-sm-10">
+                                    <input type="tel" class="form-control" id="phonenumber" placeholder="Phone number e.g 123-123-123" required value="" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{3}$" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputMessage" class="col-sm-2 control-label">Message</label>
+                                <div class="col-sm-10">
+                                    <textarea name="message" id="inputMessage" class="form-control" rows="5" cols="50" placeholder="Massage..." required value=""></textarea>
+                                </div>
+                            </div>
+                            <input type="reset" class="btn btn-default pull-left" id="reset" value="Clear form"><br>
+                            <hr>
+                            <center><button type="submit" class="btn btn-default btn-lg">SEND</button></center>
+                            </form>
+                        </div>
+                    </div>   
                 </div>
             </div>
         </article>
@@ -97,23 +132,6 @@
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function(){       
-                var scroll_start = 0;
-                var startchange = $('#startchange');
-                var offset = startchange.offset();
-                $(document).scroll(function() {
-                    scroll_start = $(this).scrollTop();
-                    if(scroll_start > offset.top) {
-                        $('.nav-justified').addClass("after");
-                        $("nav").addClass("after");
-                    } else {
-                        $("nav").removeClass("after");
-                        $('.nav-justified').removeClass("after");
-                        $('.nav-justified').addClass("before");
-                    }
-                });
-            });
-        </script>        
+        <script src="../js/static-blog.js"></script>        
     </body>
 </html>    
