@@ -20,26 +20,31 @@ $(document).ready(function () {
 $.fn.ownFormValidate = function (options) {
     options = $.extend({
         classError: 'invalid',
-        classOk: 'valid'
+        classOk: 'valid',
+        showValidOnCheck: false
     }, options);
 
-    var testInputText = function ($input) {
+    var testInputText = function ($input, showValid) {
         if ($input.attr('pattern') != undefined) {
             var reg = new RegExp($input.attr('pattern'), 'gi');
             if (!reg.test($input.val())) {
                 $input.removeClass(options.classOk).addClass(options.classError);
                 return false;
             } else {
-                $input.removeClass(options.classError).addClass(options.classOk);
-                return true;
+                if (showValid) {
+                    $input.removeClass(options.classError).addClass(options.classOk);
+                    return true;
+                }
             }
         } else {
             if ($input.val() == '') {
                 $input.removeClass(options.classOk).addClass(options.classError);
                 return false;
             } else {
-                $input.removeClass(options.classError).addClass(options.classOk);
-                return true;
+                if (showValid) {
+                    $input.removeClass(options.classError).addClass(options.classOk);
+                    return true;
+                }
             }
         }
     }
@@ -52,24 +57,38 @@ $.fn.ownFormValidate = function (options) {
             $t.addClass('required');
             if ($t.is('input')) {
                 var type = $t.attr('type').toLowerCase();
-                $t.on('blur keyup', function () { testInputText($t) });
+                $t.on('blur keyup', function () { testInputText($t, true) });
             }
             if ($t.is('textarea')) {
-                $t.on('blur keyup', function () { testInputText($t) });
+                $t.on('blur keyup', function () { testInputText($t, true) });
             }
         });
     }
     prepareElements();
+
+    $form.submit(function () {
+        prepareElements();
+        var validated = true;
+        var $inputs = $form.find('.required');
+        $inputs.each(function () {
+            var $t = $(this);
+            if (($t.is('input')) || ($t.is('textarea'))) {
+                if ((!testInputText($t, false)) && (!testInputText($t, options.showValidOnCheck))) {
+                    $('#hollow').html('Please fill in all required data')
+                                .addClass('alert alert-danger');
+                    validated = false;
+                } 
+            }
+        });
+        return validated;
+    });
 }
 
 $(function () {
-    $('form').ownFormValidate()
-});
-
-$(function () {
-    $('form').submit(function () {
-        alert('It is only a demo!');
-        e.preventDefault();
+    $('form').ownFormValidate({
+        classError: 'invalid',
+        classOk: 'valid',
+        showValidOnCheck: true
     });
 });
 
@@ -79,4 +98,6 @@ $("#reset").on("click", function (event) {
     $("input").removeClass("invalid");
     $("textarea").removeClass("valid");
     $("textarea").removeClass("invalid");
+    $('#hollow').html('');
+    $('#hollow').removeClass('alert alert-danger');
 });

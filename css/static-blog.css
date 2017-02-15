@@ -147,8 +147,10 @@ form {
 .form-group {
   padding: 5px;
 }
-:focus {
-  background-color: white;
+#hollow {
+  display: block;
+  padding: 5px;
+  text-align: center;
 }
 .invalid {
   background:#FFEDED url(http://cdn1.iconfinder.com/data/icons/ledicons/cross.png) 95% 10px no-repeat;
@@ -156,7 +158,7 @@ form {
 .valid {
   background:white url(http://cdn1.iconfinder.com/data/icons/ledicons/accept.png) 95% 10px no-repeat;
 }
-form button {
+input[type="submit"] {
   font-family: 'Risque', cursive;
 }
 
