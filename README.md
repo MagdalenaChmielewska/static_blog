@@ -7,10 +7,10 @@ Final version should also display properly on mobile.
 
 1. Home page
 
-![Img](https://github.com/MagdalenaChmielewska/static_blog/showcase/home_page.png)
+![Img](https://github.com/MagdalenaChmielewska/static_blog/blob/master/showcase/home_page.png)
 2. About page
 
-![Img](https://github.com/MagdalenaChmielewska/static_blog/showcase/about_page.png)
+![Img](https://github.com/MagdalenaChmielewska/static_blog/blob/master/showcase/about_page.png)
 3. Contact page
 
-![Img](https://github.com/MagdalenaChmielewska/static_blog/showcase/contact_page.png)
+![Img](https://github.com/MagdalenaChmielewska/static_blog/blob/master/showcase/contact_page.png)
