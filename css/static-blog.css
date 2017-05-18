@@ -1,8 +1,62 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl,
+article p, dt, dd, article p, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
 body {
-  font-family: 'Risque', cursive;
-  font-size: 25px;
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote {
+  quotes: none; }
+  blockquote:before, blockquote:after {
+    content: '';
+    content: none; }
+
+q {
+  quotes: none; }
+  q:before, q:after {
+    content: '';
+    content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Risque", cursive;
+  height: 100%;
   color: #333333;
-}
+  font-size: 2.5rem; }
 
 /* NAV */
 nav {
@@ -10,187 +64,192 @@ nav {
   top: 0;
   right: 0;
   z-index: 1;
-  display: block;
-}
-.nav>li>a {
+  display: block; }
+
+.nav > li > a {
   padding: 8px 13px;
   color: white;
-  font-size: 17px;
-  letter-spacing: 1px;
-}
-.nav>li>a:hover {
-  color: black;
-}
+  font-size: 1.7rem;
+  letter-spacing: 1px; }
+  .nav > li > a:hover {
+    color: black; }
 
 /* HEADER */
-header hr {
-  width: 30%;
-  text-align: right; 
-  margin-right: 0;
-}
 .intro-header {
   background: no-repeat center center;
   background-size: cover;
   background-attachment: scroll;
-  background-color:gray;
-  height: 530px;
+  background-color: gray;
+  height: 30%;
   font-weight: 800;
-  margin-bottom: 50px;
   padding: 100px 0 50px;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
   text-align: right;
-  color: white;
-}
+  color: white; }
+  @media only screen and (min-width: 768px) {
+    .intro-header {
+      height: 530px;
+      margin-bottom: 50px; } }
+
+header hr {
+  width: 30%;
+  margin-right: 0; }
 header h1 {
-  font-size: 70px;
-  margin-left: 550px;
-  text-shadow: 2px 2px 2px;
-}
+  font-size: 7.0rem;
+  text-shadow: 2px 2px 2px; }
+  @media only screen and (min-width: 1024px) {
+    header h1 {
+      margin-left: 550px; } }
 
 /* ARTICLE */
 article {
   margin: 5px;
   padding: 10px;
-  text-align: justify;
-}
-article h1 {
-  text-align: center;
-}
-article p a {
-  font-family: 'Risque', cursive;
-  font-size: 30px;
-  color: black;
-  text-shadow: 2px 2px 2px;
-}
-article p a:hover {
-  color: gray;
-  text-decoration: none;
-}
-dl, article p {
-  font-family: 'Cabin Condensed', sans-serif;
-  line-height: 23px;
-  font-size: 20px;
-  padding: 7px;
-}
-article p, dd {
-  text-indent: 3em;
-  padding: 7px;
-}
-dt {
-  font-size: 23px;
-  padding-top: 12px;
-}
-.post {
-  padding:20px;
+  text-align: justify; }
+  article h1 {
+    text-align: center; }
+  article dt {
+    font-size: 2.3rem;
+    padding-top: 12px; }
+  article dl, article p {
+    font-family: "Cabin Condensed", sans-serif;
+    line-height: 23px;
+    font-size: 2rem;
+    padding: 7px; }
+  article dd, article p {
+    text-indent: 3em;
+    padding: 7px; }
+  article p a {
+    font-family: "Risque", cursive;
+    font-size: 3rem;
+    color: black;
+    text-shadow: 2px 2px 2px; }
+    article p a:hover {
+      color: gray;
+      text-decoration: none; }
+
+.quotation {
+  padding: 20px;
   border-left: 10px solid #ddd;
-  background-image :url(http://4.bp.blogspot.com/-I7XvY5FUhYA/U7-Hp1S1ucI/AAAAAAAAB3Y/vE-VP7oCza0/s1600/szare+zygzaki50.png);
-  margin: 10px;
-}
+  background-image: url(http://4.bp.blogspot.com/-I7XvY5FUhYA/U7-Hp1S1ucI/AAAAAAAAB3Y/vE-VP7oCza0/s1600/szare+zygzaki50.png);
+  margin: 10px; }
+
 cite {
-  font-family: 'Cabin Condensed', cursive;
-  font-size: 15px;
-  padding: 10px;
-}
+  font-family: "Cabin Condensed", sans-serif;
+  font-size: 1.5rem;
+  padding: 10px; }
+
 em {
-  font-style: italic;
-}
-.home {
-  width: 230px;
+  font-style: italic; }
+
+.nav-picture {
+  width: 200px;
   color: gray;
   border-radius: 12px;
-  box-shadow: 3px 3px 3px;
-  box-shadow: currentColor;
-  opacity: 0.9;
-  transition: all, 1s;
-}
-.home:hover {
-  transform: scale(1.2);
-  opacity: 1;
-}
-.img-post {
+  box-shadow: 3px 3px 3px currentColor;
+  display: table-cell;
   vertical-align: middle;
-  width: 50%;
-  padding: 5px;
-  font-size: 15px;
-  font-style: italic;
-}
+  margin: auto;
+  margin-bottom: 20px; }
+  @media only screen and (min-width: 1024px) {
+    .nav-picture {
+      width: 230px;
+      opacity: 0.9;
+      transition: all, 1s; }
+      .nav-picture:hover {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 1; } }
+
+.nav-picture-decription {
+  text-align: center;
+  text-indent: 0; }
+
+.img-post {
+  margin: 20px; }
+  .img-post img {
+    display: table-cell;
+    vertical-align: middle;
+    margin: auto;
+    max-width: 100%; }
+  .img-post figcaption {
+    font-style: italic;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.5rem; }
+
 .latest-post {
   padding: 10px;
   margin: 5px;
-  font-size: 35px;
+  font-size: 3.5rem;
   text-shadow: 2px 2px 2px;
-  color: black;
-}
+  color: black; }
 
 /* POST PRESENTATION */
-.post-title {
-  color: black;
-}
-.post-subtitle {
-  font-family: 'Cabin Condensed', sans-serif;
-  font-size: 20px;
-  color: black;
-}
-.post-meta {
-  font-size: 15px;
-}
 .post-preview {
   padding: 10px;
-  margin: 5px;
-}
+  margin: 5px; }
+  .post-preview a:hover {
+    text-decoration: none; }
+
+.post-title {
+  color: black;
+  text-align: center;
+  margin-bottom: 10px; }
+
+.post-subtitle {
+  font-family: "Cabin Condensed", sans-serif;
+  font-size: 2rem;
+  color: black; }
+
+.post-meta {
+  font-size: 1.5rem; }
 
 /* FORM */
-form {
-  font-family: 'Cabin Condensed', sans-serif;
-  padding: 5px;
-}
-.form-group {
-  padding: 5px;
-}
+form, .form-group {
+  font-family: "Cabin Condensed", sans-serif;
+  padding: 5px; }
+  form label, .form-group label {
+    padding-bottom: 5px; }
+
 #hollow {
   display: block;
   padding: 5px;
-  text-align: center;
-}
+  text-align: center; }
+
 .invalid {
-  background:#FFEDED url(http://cdn1.iconfinder.com/data/icons/ledicons/cross.png) 95% 10px no-repeat;
-}
+  background: #FFEDED url(http://cdn1.iconfinder.com/data/icons/ledicons/cross.png) 95% 10px no-repeat; }
+
 .valid {
-  background:white url(http://cdn1.iconfinder.com/data/icons/ledicons/accept.png) 95% 10px no-repeat;
-}
+  background: white url(http://cdn1.iconfinder.com/data/icons/ledicons/accept.png) 95% 10px no-repeat; }
+
 input[type="submit"] {
-  font-family: 'Risque', cursive;
-}
+  font-family: "Risque", cursive; }
 
 /* FOOTER */
 footer {
-  margin: 5px;
-}
-#footer{
-  text-align: center;
-}
-footer .copyright {
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 0;
-}
-footer p {
-  font-size: 10px;
-  padding: 10px;
-}
+  margin: 5px; }
+  footer p {
+    font-size: 1rem;
+    padding: 10px; }
+  footer .copyright {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 0; }
+  footer #footer {
+    text-align: center; }
 
-/* JAVASCRIPT */
-.after {
+/* JAVASCRIPT NAVBAR*/
+.scroll-after-header {
   background-color: #D8DEE6;
-  opacity: 0.75;
-}
-.after>li>a {
-  color: black;
-}
-.after>li>a:hover {
-  color: black;
-}
-.before {
+  opacity: 0.8; }
+  .scroll-after-header li a {
+    color: black; }
+    .scroll-after-header li a:hover {
+      color: black; }
+
+.scroll-before-header {
   opacity: 1;
-  color: white;
-}
+  color: white; }
+
+/*# sourceMappingURL=static-blog.css.map */

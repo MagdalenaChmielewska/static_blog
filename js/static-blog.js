@@ -1,4 +1,5 @@
 // NAV
+
 $(document).ready(function () {
     var scroll_start = 0;
     var startchange = $('#startchange');
@@ -6,17 +7,18 @@ $(document).ready(function () {
     $(document).scroll(function () {
         scroll_start = $(this).scrollTop();
         if (scroll_start > offset.top) {
-            $('.nav-justified').addClass("after");
-            $("nav").addClass("after");
+            $('.nav-justified').addClass("scroll-after-header");
+            $("nav").addClass("scroll-after-header");
         } else {
-            $("nav").removeClass("after");
-            $('.nav-justified').removeClass("after");
-            $('.nav-justified').addClass("before");
+            $("nav").removeClass("scroll-after-header");
+            $('.nav-justified').removeClass("scroll-after-header");
+            $('.nav-justified').addClass("scroll-before-header");
         }
     });
 });
 
 // VALIDATION
+
 $.fn.ownFormValidate = function (options) {
     options = $.extend({
         classError: 'invalid',
@@ -93,6 +95,7 @@ $(function () {
 });
 
 // RESET BUTTOM
+
 $("#reset").on("click", function (event) {
     $("input").removeClass("valid");
     $("input").removeClass("invalid");

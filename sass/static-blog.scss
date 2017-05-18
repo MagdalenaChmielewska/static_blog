@@ -1,0 +1,267 @@
+@import 'static-blog-reset';
+
+$font-family-main: 'Risque', cursive;
+$font-family-second: 'Cabin Condensed', sans-serif;
+$font-family-extra: 'Indie Flower', cursive;
+
+$shodow: 2px 2px 2px;
+
+@mixin form-background($color, $url) {
+  background: $color $url 95% 10px no-repeat;
+}
+@mixin transform-picture {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+$up768: "only screen and (min-width: 768px)";
+$up1024: "only screen and (min-width: 1024px)";
+$up1220: "only screen and (min-width: 1220px)"; 
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-family-main;
+  height: 100%;
+  color: #333333;
+  font-size: 2.5rem;
+}
+
+/* NAV */
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+}
+.nav>li>a {
+  padding: 8px 13px;
+  color: white;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  &:hover {
+    color: black;
+  }
+}
+
+/* HEADER */
+
+.intro-header {
+  background: no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll;
+  background-color:gray;
+  height: 30%;
+  font-weight: 800;
+  padding: 100px 0 50px;
+  font-family: $font-family-extra;
+  text-align: right;
+  color: white;
+  @media #{$up768} {
+    height: 530px;
+    margin-bottom: 50px;
+  }
+}
+header {
+  hr {
+    width: 30%;
+    margin-right: 0;
+  }
+  h1 {
+    font-size: 7.0rem;
+    text-shadow: $shodow;
+    @media #{$up1024} {
+      margin-left: 550px;
+    }
+  }
+}
+
+/* ARTICLE */
+
+article {
+  margin: 5px;
+  padding: 10px;
+  text-align: justify;
+  h1 {
+    text-align: center;
+  }
+  dt {
+    font-size: 2.3rem;
+    padding-top: 12px;
+  }
+  dl {
+    font-family: $font-family-second;
+    line-height: 23px;
+    font-size: 2rem;
+    padding: 7px;
+  }
+  dd {
+    text-indent: 3em;
+    padding: 7px;
+  }
+  p {
+    @extend dl;
+    @extend dd;
+    a {
+      font-family: $font-family-main;
+      font-size: 3rem;
+      color: black;
+      text-shadow: $shodow;
+      &:hover {
+        color: gray;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.quotation {
+  padding:20px;
+  border-left: 10px solid #ddd;
+  background-image :url(http://4.bp.blogspot.com/-I7XvY5FUhYA/U7-Hp1S1ucI/AAAAAAAAB3Y/vE-VP7oCza0/s1600/szare+zygzaki50.png);
+  margin: 10px;
+}
+cite {
+  font-family: $font-family-second;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+em {
+  font-style: italic;
+}
+.nav-picture {
+  width: 200px;
+  color: gray;
+  border-radius: 12px;
+  box-shadow: 3px 3px 3px currentColor;
+  display: table-cell;
+  vertical-align: middle;
+  margin: auto;
+  margin-bottom: 20px;
+  @media #{$up1024} {
+    width: 230px;
+    opacity: 0.9;
+    transition: all, 1s;
+    &:hover {
+      @include transform-picture;
+      opacity: 1;
+    }
+  }
+}
+.nav-picture-decription {
+  text-align: center;
+  text-indent: 0;
+}
+
+.img-post {
+  margin: 20px;
+  img {
+    display: table-cell;
+    vertical-align: middle;
+    margin: auto;
+    max-width: 100%;
+  }
+  figcaption {
+    font-style: italic;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+.latest-post {
+  padding: 10px;
+  margin: 5px;
+  font-size: 3.5rem;
+  text-shadow: $shodow;
+  color: black;
+}
+
+/* POST PRESENTATION */
+
+.post-preview {
+  padding: 10px;
+  margin: 5px;
+  a:hover {
+    text-decoration: none;
+  }
+}
+.post-title {
+  color: black;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.post-subtitle {
+  font-family: $font-family-second;
+  font-size: 2rem;
+  color: black;
+}
+.post-meta {
+  font-size: 1.5rem;
+}
+
+/* FORM */
+
+form, .form-group {
+  font-family: $font-family-second;
+  padding: 5px;
+  label {
+    padding-bottom: 5px;
+  }
+}
+#hollow {
+  display: block;
+  padding: 5px;
+  text-align: center;
+}
+.invalid {
+  @include form-background(#FFEDED, url(http://cdn1.iconfinder.com/data/icons/ledicons/cross.png));
+}
+.valid {
+  @include form-background(white, url(http://cdn1.iconfinder.com/data/icons/ledicons/accept.png));
+}
+input[type="submit"] {
+  font-family: $font-family-main;
+}
+
+/* FOOTER */
+
+footer {
+  margin: 5px;
+  p {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .copyright {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  #footer{
+    text-align: center;
+  }
+}
+
+/* JAVASCRIPT NAVBAR*/
+
+.scroll-after-header {
+  background-color: #D8DEE6;
+  opacity: 0.8;
+  li a {
+    color: black;
+    &:hover {
+      color: black;
+    }
+  }
+}
+.scroll-before-header {
+  opacity: 1;
+  color: white;
+}
