@@ -1,4 +1,11 @@
-// NAV
+// NAV MOBILE
+
+var hamburger = document.querySelector(".hamburger");
+hamburger.addEventListener("click", function() {
+    document.querySelector(".page-nav").classList.toggle("nav-opened");
+}, false);
+
+// NAV SCROLL
 
 $(document).ready(function () {
     var scroll_start = 0;

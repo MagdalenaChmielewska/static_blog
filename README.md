@@ -1,13 +1,14 @@
 # Description
 
-This project is demonstration of usage of technologies like: Bootstrap, HTML5, CSS3, Javascript and jQuery.
-Final version should also display properly on mobile.
+This project is demonstration of usage of technologies like: Bootstrap, RWD, HTML5, CSS3, SASS, Javascript and jQuery.
 
 # Screens
 
 1. Home page
 
 ![Img](https://github.com/MagdalenaChmielewska/static_blog/blob/master/showcase/home_page.png)
+![Img](https://github.com/MagdalenaChmielewska/static_blog/blob/master/showcase/home_page_mobile1.png)
+![Img](https://github.com/MagdalenaChmielewska/static_blog/blob/master/showcase/home_page_mobile2.png)
 2. About page
 
 ![Img](https://github.com/MagdalenaChmielewska/static_blog/blob/master/showcase/about_page.png)

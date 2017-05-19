@@ -16,7 +16,7 @@ $shodow: 2px 2px 2px;
 
 $up768: "only screen and (min-width: 768px)";
 $up1024: "only screen and (min-width: 1024px)";
-$up1220: "only screen and (min-width: 1220px)"; 
+$under1024: "only screen and (max-width: 1023px)";
 
 * {
   box-sizing: border-box;
@@ -32,22 +32,105 @@ body {
   font-size: 2.5rem;
 }
 
+/* JAVASCRIPT NAVBAR*/
+
+.scroll-after-header {
+  background-color: #D8DEE6;
+  opacity: 0.8;
+  .nav li a {
+    color: black;
+    &:hover {
+      color: black;
+    }
+  }
+}
+.scroll-before-header {
+  opacity: 1;
+  color: white;
+}
+
 /* NAV */
 
 nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  display: block;
+   width: 100%;
+  .nav {
+    margin: 15px auto;
+    li a {
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+    }
+  }
 }
-.nav>li>a {
-  padding: 8px 13px;
-  color: white;
-  font-size: 1.7rem;
-  letter-spacing: 1px;
-  &:hover {
-    color: black;
+
+@media #{$under1024} {
+  nav {
+    position: absolute;
+    z-index: 10;
+    .hamburger {
+      fill: white;
+      background: 0;
+      border: 0;
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      .close-icon {
+        display: none;
+      }
+      .hamburger-icon {
+        width: 18px;
+      }
+    }  
+    .nav {
+      width: 100%;
+      text-align: center;
+      display: none;
+      opacity: 0;
+      li {
+        padding: 15px;
+        a {
+        color: black;
+        }
+      }
+    }
+    .nav-opened {
+      background-color: white;
+      box-shadow: -1px 9px 19px -8px rgba(0, 0, 0, 0.5);
+      .hamburger-icon {
+        display: none;
+      }
+      .close-icon {
+        display: inline-block;
+        fill: black;
+        width: 14px;
+      }
+      .nav {
+        display: block;
+        opacity: 1;
+      }
+    }
+    .page-nav {
+      transition: background 1s, box-shadow 0.9s;
+    }
+  }
+}
+
+@media #{$up1024} {
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    .nav>li>a {
+      color: white;
+      padding: 8px 13px;
+      &:hover {
+        color: black;
+      }
+    }
+    .hamburger {
+      display: none;
+    }
   }
 }
 
@@ -67,6 +150,7 @@ nav {
   @media #{$up768} {
     height: 530px;
     margin-bottom: 50px;
+    padding-top: 180px;
   }
 }
 header {
@@ -247,21 +331,4 @@ footer {
   #footer{
     text-align: center;
   }
-}
-
-/* JAVASCRIPT NAVBAR*/
-
-.scroll-after-header {
-  background-color: #D8DEE6;
-  opacity: 0.8;
-  li a {
-    color: black;
-    &:hover {
-      color: black;
-    }
-  }
-}
-.scroll-before-header {
-  opacity: 1;
-  color: white;
 }
