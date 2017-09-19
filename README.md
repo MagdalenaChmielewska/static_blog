@@ -2,6 +2,9 @@
 
 This project is demonstration of usage of technologies like: Bootstrap, RWD, HTML5, CSS3, SASS, Javascript and jQuery.
 
+## Online  
+[https://magdalenachmielewska.github.io/static_blog/src/](https://magdalenachmielewska.github.io/static_blog/src/)
+
 # Screens
 
 1. Home page
